@@ -2,7 +2,8 @@
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 
-const BASE = import.meta.env.BASE_URL; // includes trailing slash
+const BASE_RAW = import.meta.env.BASE_URL;
+const BASE = BASE_RAW.endsWith('/') ? BASE_RAW : `${BASE_RAW}/`;
 ---
 
 <header>
@@ -10,8 +11,8 @@ const BASE = import.meta.env.BASE_URL; // includes trailing slash
 		<h2><a href={BASE}>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href={BASE}>Inicio</HeaderLink>
-			<HeaderLink href={`${BASE}blog`}>Bitácora</HeaderLink>
-			<HeaderLink href={`${BASE}about`}>Acerca de</HeaderLink>
+			<HeaderLink href={`${BASE}blog/`}>Bitácora</HeaderLink>
+			<HeaderLink href={`${BASE}about/`}>Acerca de</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/bot33afne-ai" target="_blank" rel="noopener noreferrer">
