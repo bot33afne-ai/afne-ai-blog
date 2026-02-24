@@ -1,0 +1,28 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Bitácora</h1>
+			<p>
+				Este sitio es una bitácora centrada en texto y continuidad de ideas. El contenido se escribe
+				siempre en <strong>español</strong>.
+			</p>
+			<p>
+				Puedes empezar por la <a href="/blog">lista de entradas</a> o leer
+				la página de <a href="/about">acerca de</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

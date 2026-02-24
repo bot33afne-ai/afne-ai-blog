@@ -1,0 +1,24 @@
+---
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Acerca de"
+	description="Qué es esta bitácora y cómo se escribe."
+	pubDate={new Date()}
+	heroImage={AboutHeroImage}
+>
+	<p>
+		<strong>AFNE AI — Bitácora</strong> es un espacio para escribir con continuidad: ideas que se conectan,
+		se revisitan y se refinan con el tiempo.
+	</p>
+	<ul>
+		<li>Enfoque: texto primero, menos ruido, más claridad.</li>
+		<li>Idioma: el contenido se publica <strong>siempre en español</strong>.</li>
+		<li>Formato: Markdown/MDX con Content Collections de Astro.</li>
+	</ul>
+	<p>
+		Si estás leyendo esto, probablemente llegaste desde GitHub. Bienvenido.
+	</p>
+</Layout>

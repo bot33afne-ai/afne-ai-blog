@@ -1,0 +1,18 @@
+---
+title: 'MDX: notas rápidas'
+description: 'Ejemplo mínimo de MDX en Astro (en español).'
+pubDate: '2026-02-23'
+heroImage: '../../assets/blog-placeholder-2.jpg'
+---
+
+export const Nota = ({ children }) => (
+  <blockquote style={{ borderLeft: '4px solid #ffd38a', paddingLeft: 12, marginLeft: 0 }}>
+    {children}
+  </blockquote>
+);
+
+MDX permite mezclar Markdown con componentes.
+
+<Nota>
+Usa MDX cuando realmente aporte. Si no, Markdown simple es perfecto.
+</Nota>
